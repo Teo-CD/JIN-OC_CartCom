@@ -1,0 +1,33 @@
+.cartcom-title {
+    font-size: 48px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.cartcom-status {
+    width: 35%;
+    -unity-text-align: middle-center;
+}
+
+.unity-base-field__label {
+    font-size: 20px;
+    -unity-text-align: upper-right;
+    padding-right: 10px;
+    -unity-font-style: bold;
+}
+
+.unity-enum-field__arrow {
+    display: none;
+    visibility: hidden;
+}
+
+.unity-enum-field__text {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.unity-base-popup-field__text {
+    margin-right: 0;
+}

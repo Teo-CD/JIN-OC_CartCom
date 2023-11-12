@@ -1,0 +1,28 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/StyleSheet.uss?fileID=7433441132597879392&amp;guid=92f213dfb09cc00b4a07f0fe1699b1a1&amp;type=3#StyleSheet" />
+    <ui:VisualElement name="MainWindow" style="flex-grow: 1;">
+        <ui:VisualElement name="Logo" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Textures/TitleLogo.png?fileID=2800000&amp;guid=7e5fb41e9b33b172a8a48901da75ee73&amp;type=3#TitleLogo&apos;); -unity-background-scale-mode: scale-to-fit; height: 28%; width: 100%;" />
+        <ui:VisualElement name="ColumnLayout" style="align-items: stretch; justify-content: flex-start; align-self: auto; flex-direction: row; height: 80%; margin-top: 40px;">
+            <ui:VisualElement name="ArduinoColumn" class="cartcom-status">
+                <ui:Label text="Arduino" name="Title" class="cartcom-title" />
+                <ui:DropdownField label="Port série" index="-1" name="Arduino-Serial" style="padding-right: 20px;" />
+                <ui:EnumField label="État" type="Arduino_Com+ArduinoState, Assembly-CSharp" focusable="false" picking-mode="Ignore" name="Arduino-State" style="padding-right: 20px;" />
+                <ui:Button text="Connecter" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Arduino-Button" style="align-self: center; padding-right: 15%; padding-left: 15%; max-width: 60%;" />
+                <ui:ProgressBar value="0" title="Transfert..." name="Arduino-Progress" high-value="512" style="display: flex; visibility: hidden;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="CartColumn" style="flex-grow: 1; justify-content: center; align-items: stretch; width: 20%;">
+                <ui:Label text="Cartouche" name="Title" class="cartcom-title" />
+                <ui:VisualElement name="Cart" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Textures/empty_cart.png?fileID=2800000&amp;guid=d3dd33d1eafc702378bf07141763adea&amp;type=3#empty_cart&apos;); -unity-background-scale-mode: scale-to-fit; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 5%; margin-right: 10%; margin-bottom: 5%; margin-left: 10%; height: 60%; border-top-width: 0; width: auto;" />
+                <ui:VisualElement name="VisualElement" style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: center; align-self: stretch; margin-bottom: 18px;">
+                    <ui:Button text="Charger" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Cart-Load" tooltip="Charge une cartouche connectée à l&apos;Arduino vers Unity" style="height: 40px; width: 40%; visibility: visible; display: flex;" />
+                    <ui:Button text="Sauvegarder" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Cart-Write" tooltip="Sauvegarde une cartouche depuis Unity vers l&apos;Arduino" style="height: 40px; width: 40%;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="PICOColumn" class="cartcom-status">
+                <ui:Label text="PICO-8" name="Title" class="cartcom-title" />
+                <ui:EnumField label="État" type="PICO8_Handler+PicoState, Assembly-CSharp" name="PICO-State" focusable="false" picking-mode="Ignore" style="padding-right: 20px;" />
+                <ui:Button text="Lancer" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PICO-Button" style="align-self: center; padding-right: 15%; padding-left: 15%; max-width: 60%;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
