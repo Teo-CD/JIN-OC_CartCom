@@ -75,7 +75,7 @@ void loop() {
     // Arduino I2C buffer is 32 bytes, so we need multiple requests per page.
     for (int j = 0; j < i2c_buff_per_page; j++) {
       /* FIXME: Request and read the data from the EEPROM.
-          Tips: - You will need two calls with Wire.<func>, including one already used.
+          Tips: - You will need two calls with Wire.<func>.
                 - Check the datasheet to see if you need to send the address again */
     }
 
